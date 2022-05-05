@@ -12,16 +12,34 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "lint": "eslint src",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
-    ]
+      "react-app/jest",
+      "prettier"
+    ],
+    "plugins": [
+        "prettier",
+        "cypress"
+    ],
+    "env": {
+        "cypress/globals": true
+    },
+    "rules": {
+        "prettier/prettier": "warn"
+    }
+  },
+  "prettier": {
+      "arrowParens": "avoid",
+      "bracketSpacing": false,
+      "singleQuote": true,
+      "traillingComma": "all"
   },
   "browserslist": {
     "production": [
