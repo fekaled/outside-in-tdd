@@ -15,31 +15,31 @@
     "start": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "cypress": "cypress open",
     "lint": "eslint src",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest",
-      "prettier"
+      "react-app/jest"
     ],
     "plugins": [
-        "prettier",
-        "cypress"
+      "prettier",
+      "cypress"
     ],
     "env": {
-        "cypress/globals": true
+      "cypress/globals": true
     },
     "rules": {
-        "prettier/prettier": "warn"
+      "prettier/prettier": "warn"
     }
   },
   "prettier": {
-      "arrowParens": "avoid",
-      "bracketSpacing": false,
-      "singleQuote": true,
-      "traillingComma": "all"
+    "arrowParens": "avoid",
+    "bracketSpacing": false,
+    "singleQuote": true,
+    "traillingComma": "all"
   },
   "browserslist": {
     "production": [
@@ -52,5 +52,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cypress": "^9.6.0"
   }
 }
